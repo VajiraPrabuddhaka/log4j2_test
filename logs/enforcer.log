@@ -1,0 +1,7 @@
+[2022-01-09 15:38:48,060][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 15:46:46,562][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 15:47:12,312][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 15:52:07,470][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 19:07:06,222][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 19:07:42,256][]  INFO {com.vajira.demo.Main} - Helllllooooooooooo
+[2022-01-09 19:07:42,261][] DEBUG {com.vajira.demo.Main} - Total Subscriptions in new cache: 4
