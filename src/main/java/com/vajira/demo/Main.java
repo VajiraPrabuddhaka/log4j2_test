@@ -14,7 +14,7 @@ public class Main {
         System.setProperty("log4j.configurationFile","/home/vajira/WSO2dev/my-work/test_projects/log4j2_test/src/main/resources/log4j2.properties");
 
         log.info("Helllllooooooooooo this is a sample info message");
-        log.error("msg {}", 4, ErrorLog("critical", 4), new NullPointerException());
+        log.error("msg {}", 4, ErrorLog("critical", 4));
         log.error("Helllllooooooooooo this is a sample error message");
         log.debug("Helllllooooooooooo this is a sample debug message");
     }
