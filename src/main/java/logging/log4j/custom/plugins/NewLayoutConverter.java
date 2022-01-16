@@ -13,7 +13,7 @@ import org.apache.logging.log4j.util.ReadOnlyStringMap;
 import java.util.Arrays;
 
 @Plugin(name = "NewLayoutConverter", category = "Converter")
-@ConverterKeys({"custLayConv"})
+@ConverterKeys({"custLayConv", "conv1"})
 public class NewLayoutConverter extends LogEventPatternConverter {
     protected NewLayoutConverter(String name, String style) {
         super(name, style);
@@ -34,10 +34,17 @@ public class NewLayoutConverter extends LogEventPatternConverter {
         Object[] parameters = mevent.getParameters();
         if (event.getLevel() == Level.ERROR){
             if (Arrays.stream(parameters).anyMatch(p -> p.getClass().getName().equals(ErrorLog.class.getName()))){
-                ErrorLog e = (ErrorLog) Arrays.stream(parameters).filter(
-                        p -> p.getClass().getName().equals(ErrorLog.class.getName()));
+                Arrays.stream(parameters).filter(p ->
+                        p.getClass().getName().equals(ErrorLog.class.getName())).forEach((c) -> {
+                    ErrorLog errorLog = (ErrorLog) c;
+                    toAppendTo.append("severity:"+errorLog.getSeverity());
+                    toAppendTo.append(" ");
+                    toAppendTo.append("error_code:"+errorLog.getCode());
+                });
             } else {
-                toAppendTo.append("text2");
+                toAppendTo.append("severity:"+"Normal");
+                toAppendTo.append(" ");
+                toAppendTo.append("error_code:"+"000");
             }
         }
 

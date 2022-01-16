@@ -17,5 +17,6 @@ public class Main {
         log.error("msg {}", 4, ErrorLog("critical", 4));
         log.error("Helllllooooooooooo this is a sample error message");
         log.debug("Helllllooooooooooo this is a sample debug message");
+        log.error("Helllllooooooooooo this is a sample error message with exception", new NullPointerException());
     }
 }

@@ -3,6 +3,7 @@ package logging.log4j.custom.plugins;
 import logging.error.format.ErrorLog;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.impl.MutableLogEvent;
+import org.apache.logging.log4j.core.layout.PatternLayout;
 import org.json.simple.JSONObject;
 import org.apache.logging.log4j.core.Layout;
 import org.apache.logging.log4j.core.LogEvent;
